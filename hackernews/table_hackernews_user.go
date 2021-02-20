@@ -21,7 +21,7 @@ type User struct {
 func tableHackernewsUser(ctx context.Context) *plugin.Table {
 	return &plugin.Table{
 		Name:        "hackernews_user",
-		Description: "Information about HackerNews registered users who have public activity.",
+		Description: "Information about Hacker News registered users who have public activity.",
 		List: &plugin.ListConfig{
 			KeyColumns: plugin.SingleColumn("id"),
 			Hydrate:    listUser,
