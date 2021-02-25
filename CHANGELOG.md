@@ -1,8 +1,8 @@
-## v0.0.1 [TBD]
+## v0.0.1 [2021-02-25]
 
 _What's new?_
 
-* Initial release with tables
+- Initial release with tables
 
   - hackernews_ask_hn
   - hackernews_best
