@@ -39,19 +39,18 @@ standard output (can use `.output` to change to `csv` or `json`):
 
 ## Installation
 
-If you are just getting started with Steampipe, head over to https://steampipe.io/downloads to install the CLI (don't worry it will only take a minute).  
-
-Once that is done to download and install the latest **Hacker News plugin**:
+If you are just getting started with Steampipe, head over to https://steampipe.io/downloads to install the CLI (don't worry it will only take a minute). Once that is done to download and install the latest **Hacker News plugin**:
 
 ```bash
 steampipe plugin install hackernews
 ```
 
+## Browse the [Available Tables ->](https://hub.steampipe.io/plugins/turbot/hackernews/tables)
+
 ## Credentials
 
 The [Hacker News API](https://github.com/HackerNews/API) is open to the public and does not require any credentials.
 
-## See the [Available Tables ->](https://hub.steampipe.io/plugins/turbot/hackernews/tables)
 
 ## Connection Configuration
 
