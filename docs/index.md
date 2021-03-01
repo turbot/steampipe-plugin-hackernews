@@ -51,7 +51,7 @@ steampipe plugin install hackernews
 
 The [Hacker News API](https://github.com/HackerNews/API) is open to the public and does not require any credentials.
 
-## [Available Tables —>](https://hub.steampipe.io/plugins/turbot/hackernews/tables)
+## See the [Available Tables ->](https://hub.steampipe.io/plugins/turbot/hackernews/tables)
 
 ## Connection Configuration
 
