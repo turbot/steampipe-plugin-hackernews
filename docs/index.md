@@ -45,7 +45,7 @@ If you are just getting started with Steampipe, head over to https://steampipe.i
 steampipe plugin install hackernews
 ```
 
-## Browse the [Available Tables ->](https://hub.steampipe.io/plugins/turbot/hackernews/tables)
+## Browse the [Available Tables →](https://hub.steampipe.io/plugins/turbot/hackernews/tables)
 
 ## Credentials
 
