@@ -66,25 +66,25 @@ steampipe plugin install hackernews
 
 ```
 > .inspect hackernews_item
-+-------------+-----------------------------+---------------------------------------------------------------------------+
-| COLUMN      | TYPE                        | DESCRIPTION                                                               |
-+-------------+-----------------------------+---------------------------------------------------------------------------+
-| by          | text                        | The username of the item's author.                                        |
-| dead        | boolean                     | True if the item is dead.                                                 |
-| deleted     | boolean                     | True if the item is deleted.                                              |
-| descendants | bigint                      | In the case of stories or polls, the total comment count.                 |
-| id          | bigint                      | The item's unique id.                                                     |
-| kids        | jsonb                       | The ids of the item's comments, in ranked display order.                  |
-| parent      | bigint                      | The comment's parent: either another comment or the relevant story.       |
-| parts       | jsonb                       | A list of related pollopts, in display order.                             |
-| poll        | bigint                      | The pollopt's associated poll.                                            |
-| score       | bigint                      | The story's score, or the votes for a pollopt.                            |
-| text        | text                        | The comment, story or poll text. HTML.                                    |
-| time        | timestamp without time zone | Timestamp when the item was created.                                      |
-| title       | text                        | The title of the story, poll or job. HTML.                                |
-| type        | text                        | The type of item. One of "job", "story", "comment", "poll", or "pollopt". |
-| url         | text                        | The URL of the story.                                                     |
-+-------------+-----------------------------+---------------------------------------------------------------------------+
++-------------+-----------+---------------------------------------------------------------------------+
+| COLUMN      | TYPE      | DESCRIPTION                                                               |
++-------------+-----------+---------------------------------------------------------------------------+
+| by          | text      | The username of the item's author.                                        |
+| dead        | boolean   | True if the item is dead.                                                 |
+| deleted     | boolean   | True if the item is deleted.                                              |
+| descendants | bigint    | In the case of stories or polls, the total comment count.                 |
+| id          | bigint    | The item's unique id.                                                     |
+| kids        | jsonb     | The ids of the item's comments, in ranked display order.                  |
+| parent      | bigint    | The comment's parent: either another comment or the relevant story.       |
+| parts       | jsonb     | A list of related pollopts, in display order.                             |
+| poll        | bigint    | The pollopt's associated poll.                                            |
+| score       | bigint    | The story's score, or the votes for a pollopt.                            |
+| text        | text      | The comment, story or poll text. HTML.                                    |
+| time        | timestamp | Timestamp when the item was created.                                      |
+| title       | text      | The title of the story, poll or job. HTML.                                |
+| type        | text      | The type of item. One of "job", "story", "comment", "poll", or "pollopt". |
+| url         | text      | The URL of the story.                                                     |
++-------------+-----------+---------------------------------------------------------------------------+
 ```
 
 ## Credentials
