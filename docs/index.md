@@ -45,7 +45,15 @@ If you are just getting started with Steampipe, head over to https://steampipe.i
 steampipe plugin install hackernews
 ```
 
-## Browse the [Available Tables ->](https://hub.steampipe.io/plugins/turbot/hackernews/tables)
+## Browse the [Available Tables →](https://hub.steampipe.io/plugins/turbot/hackernews/tables)
+ - [hackernews_ask_hn](https://hub.steampipe.io/plugins/turbot/hackernews/tables/hackernews_ask_hn) // Up to 200 of the latest Ask HN stories.
+ - [hackernews_best](https://hub.steampipe.io/plugins/turbot/hackernews/tables/hackernews_best) // 500 of the latest "best" stories.
+ - [hackernews_item](https://hub.steampipe.io/plugins/turbot/hackernews/tables/hackernews_item) // Stories, comments, jobs, Ask HNs and even polls are just items. This table includes the most recent items posted to Hacker News. `max_items` in the connection configuration defines the number of items returned by a list query to this table.
+ - [hackernews_job](https://hub.steampipe.io/plugins/turbot/hackernews/tables/hackernews_job) // Up to 200 job listings.
+ - [hackernews_new](https://hub.steampipe.io/plugins/turbot/hackernews/tables/hackernews_new) // The 500 newest stories.
+ - [hackernews_show_hn](https://hub.steampipe.io/plugins/turbot/hackernews/tables/hackernews_show_hn) // Up to 200 of the latest "Show HN" stories.
+ - [hackernews_top](https://hub.steampipe.io/plugins/turbot/hackernews/tables/hackernews_top) // 500 of the latest "top" stories.
+ - [hackernews_user](https://hub.steampipe.io/plugins/turbot/hackernews/tables/hackernews_user) // Query information about users with public activity on Hacker News.
 
 ## Credentials
 
