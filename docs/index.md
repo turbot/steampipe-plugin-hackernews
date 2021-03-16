@@ -101,6 +101,5 @@ Installing the latest hackernews plugin will create a default connection named `
 ```hcl
 connection "hackernews" {
   plugin    = "hackernews"
-  max_items = 5000
 }
 ```

@@ -14,6 +14,7 @@ import (
 func itemCols() []*plugin.Column {
 	return []*plugin.Column{
 		// Top columns
+		//{Name: "id", Type: proto.ColumnType_STRING, Description: "The item's unique id."},
 		{Name: "id", Type: proto.ColumnType_INT, Description: "The item's unique id."},
 		// TODO - How can I set the default hydrate method?
 		{Name: "title", Type: proto.ColumnType_STRING, Hydrate: getItem, Description: "The title of the story, poll or job. HTML."},
@@ -26,6 +27,7 @@ func itemCols() []*plugin.Column {
 		{Name: "descendants", Type: proto.ColumnType_INT, Hydrate: getItem, Description: "In the case of stories or polls, the total comment count."},
 		{Name: "kids", Type: proto.ColumnType_JSON, Hydrate: getItem, Description: "The ids of the item's comments, in ranked display order."},
 		{Name: "parent", Type: proto.ColumnType_INT, Hydrate: getItem, Description: "The comment's parent: either another comment or the relevant story."},
+		//{Name: "parent", Type: proto.ColumnType_STRING, Hydrate: getItem, Description: "The comment's parent: either another comment or the relevant story."},
 		{Name: "parts", Type: proto.ColumnType_JSON, Hydrate: getItem, Description: "A list of related pollopts, in display order."},
 		{Name: "poll", Type: proto.ColumnType_INT, Hydrate: getItem, Description: "The pollopt's associated poll."},
 		{Name: "text", Type: proto.ColumnType_STRING, Hydrate: getItem, Description: "The comment, story or poll text. HTML."},
@@ -51,13 +53,24 @@ func hydrateList(listType string) plugin.HydrateFunc {
 
 func getItem(ctx context.Context, d *plugin.QueryData, h *plugin.HydrateData) (interface{}, error) {
 	var id int
+
 	if h.Item != nil {
 		post := h.Item.(*hacknews.Post)
 		id = post.Id
 	} else {
 		quals := d.KeyColumnQuals
 		id = int(quals["id"].GetInt64Value())
+
+		// var err error
+		// id, err = strconv.Atoi(quals["id"].GetStringValue())
+		// if err != nil {
+		// 	return nil, fmt.Errorf("error converting id from string to int")
+		// }
+
 	}
+
+	plugin.Logger(ctx).Warn("getItem", "id", id)
+
 	init := hacknews.Initializer{"_ignored_", 1}
 	posts, err := init.GetPostStory([]int{int(id)})
 	if err != nil {

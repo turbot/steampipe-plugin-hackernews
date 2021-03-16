@@ -1,63 +1,31 @@
 # Table: hackernews_item
 
 Stories, comments, jobs, Ask HNs and even polls are just items. This table
-includes the most recent items posted to Hacker News.
-
-`max_items` in the connection configuration defines the number of items
-returned by a list query to this table.
+will look up any item posted to Hacker News, however you MUST specify an equal (`=`) qualifier for the `id` in a `where` or `join` clause (`where id =` or `join... on id = `).
 
 ## Examples
 
-### List recent items
+### Lookup an item by its ID
 
 ```sql
-select * from hackernews_item
+select * from hackernews_item where id = '26377203'
 ```
 
-### List all recent stories
 
+### List children of an item
 ```sql
-select * from hackernews_item where type = 'story'
-```
-
-### Recent stories with score > 5
-
-```sql
-select
-  *
-from
-  hackernews_item
+select 
+  p.title,
+  p.id as parent_id,
+  child_id,
+  c.id,
+  c.text
+from 
+  hackernews_item as p,
+  jsonb_array_elements_text(p.kids) as child_id
+left join
+  hackernews_item as c on c.id  = child_id
 where
-  type = 'story'
-  and score > 5
-order by
-  score desc
+  p.id = '26468248'
 ```
 
-### Recent stories with no comments
-
-```sql
-select
-  *
-from
-  hackernews_item
-where
-  type = 'story'
-  and kids is null
-```
-
-### Which users have made more than 5 submissions recently
-
-```sql
-select
-  by,
-  count(*)
-from
-  hackernews_item
-group by
-  by
-having
-  count(*) > 5
-order by
-  count desc
-```
