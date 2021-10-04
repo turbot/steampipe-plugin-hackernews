@@ -1,44 +1,72 @@
-<p align="center">
-  <h1 align="center">Hacker News Plugin for Steampipe</h1>
-</p>
+![image](https://hub.steampipe.io/images/plugins/turbot/hackernews-social-graphic.png)
 
-<p align="center">
-  <a aria-label="Steampipe logo" href="https://steampipe.io">
-    <img src="https://steampipe.io/images/steampipe_logo_wordmark_padding.svg" height="28">
-  </a>
-  <a aria-label="License" href="LICENSE">
-    <img alt="" src="https://img.shields.io/static/v1?label=license&message=Apache-2.0&style=for-the-badge&labelColor=777777&color=F3F1F0">
-  </a>
-</p>
+# Hacker News Plugin for Steampipe
 
-## Query Hacker News with SQL
+Use SQL to query stories, users and other items from [Hacker News](https://news.ycombinator.com).
 
-Use SQL to query stories, users and other items from [Hacker News](https://news.ycombinator.com). For example:
+- **[Get started →](https://hub.steampipe.io/plugins/turbot/hackernews)**
+- Documentation: [Table definitions & examples](https://hub.steampipe.io/plugins/turbot/hackernews/tables)
+- Community: [Slack Channel](https://join.slack.com/t/steampipe/shared_invite/zt-oij778tv-lYyRTWOTMQYBVAbtPSWs3g)
+- Get involved: [Issues](https://github.com/turbot/steampipe-plugin-hackernews/issues)
+
+## Quick start
+
+Install the plugin with [Steampipe](https://steampipe.io):
+
+```shell
+steampipe plugin install hackernews
+```
+
+Run a query:
 
 ```sql
 select * from hackernews_show_hn
 ```
 
-Learn about [Steampipe](https://steampipe.io/).
+## Developing
 
-## Get started
+Prerequisites:
 
-**[Table documentation and examples &rarr;](https://hub.steampipe.io/plugins/turbot/hackernews)**
+- [Steampipe](https://steampipe.io/downloads)
+- [Golang](https://golang.org/doc/install)
 
-Install the plugin:
+Clone:
+
+```sh
+git clone https://github.com/turbot/steampipe-plugin-hackernews.git
+cd steampipe-plugin-hackernews
+```
+
+Build, which automatically installs the new version to your `~/.steampipe/plugins` directory:
 
 ```
-steampipe plugin install hackernews
+make
 ```
 
-## Get involved
+Configure the plugin:
 
-### Community
+```
+cp config/* ~/.steampipe/config
+vi ~/.steampipe/config/hackernews.spc
+```
 
-The Steampipe community can be found on [GitHub Discussions](https://github.com/turbot/steampipe/discussions), where you can ask questions, voice ideas, and share your projects.
+Try it!
 
-Our [Code of Conduct](https://github.com/turbot/steampipe/blob/main/CODE_OF_CONDUCT.md) applies to all Steampipe community channels.
+```
+steampipe query
+> .inspect hackernews
+```
 
-### Contributing
+Further reading:
 
-Please see [CONTRIBUTING.md](https://github.com/turbot/steampipe/blob/main/CONTRIBUTING.md).
+- [Writing plugins](https://steampipe.io/docs/develop/writing-plugins)
+- [Writing your first table](https://steampipe.io/docs/develop/writing-your-first-table)
+
+## Contributing
+
+Please see the [contribution guidelines](https://github.com/turbot/steampipe/blob/main/CONTRIBUTING.md) and our [code of conduct](https://github.com/turbot/steampipe/blob/main/CODE_OF_CONDUCT.md). All contributions are subject to the [Apache 2.0 open source license](https://github.com/turbot/steampipe-plugin-hackernews/blob/main/LICENSE).
+
+`help wanted` issues:
+
+- [Steampipe](https://github.com/turbot/steampipe/labels/help%20wanted)
+- [Hacker News Plugin](https://github.com/turbot/steampipe-plugin-hackernews/labels/help%20wanted)
