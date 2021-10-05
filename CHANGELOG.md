@@ -1,3 +1,10 @@
+## v0.0.3 [2021-10-05]
+
+_Enhancements_
+
+- Updated the README file to include GitHub clone links and license information ([#11](https://github.com/turbot/steampipe-plugin-hackernews/pull/11))
+- Updated plugin license to Apache 2.0 per [turbot/steampipe#488](https://github.com/turbot/steampipe/issues/488)
+
 ## v0.0.2 [2021-03-07]
 
 _Enhancements_
