@@ -3,7 +3,7 @@ package hackernews
 import (
 	"context"
 
-	"github.com/turbot/steampipe-plugin-sdk/plugin"
+	"github.com/turbot/steampipe-plugin-sdk/v2/plugin"
 )
 
 func tableHackernewsAskHn(ctx context.Context) *plugin.Table {
