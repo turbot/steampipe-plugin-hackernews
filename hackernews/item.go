@@ -36,7 +36,7 @@ func itemCols() []*plugin.Column {
 
 func hydrateList(listType string) plugin.HydrateFunc {
 	return func(ctx context.Context, d *plugin.QueryData, _ *plugin.HydrateData) (interface{}, error) {
-		init := hacknews.Initializer{Story:listType, NbPosts:0}
+		init := hacknews.Initializer{Story: listType, NbPosts: 0}
 		codes, err := init.GetCodesStory()
 		if err != nil {
 			plugin.Logger(ctx).Error("hackernews_*.list", "query_error", err)
@@ -58,7 +58,7 @@ func getItem(ctx context.Context, d *plugin.QueryData, h *plugin.HydrateData) (i
 		quals := d.KeyColumnQuals
 		id = int(quals["id"].GetInt64Value())
 	}
-	init := hacknews.Initializer{Story:"_ignored_", NbPosts:1}
+	init := hacknews.Initializer{Story: "_ignored_", NbPosts: 1}
 	posts, err := init.GetPostStory([]int{int(id)})
 	if err != nil {
 		plugin.Logger(ctx).Error("hackernews_top_story.getTopStory", "query_error", err)
