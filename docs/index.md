@@ -6,6 +6,8 @@ brand_color: "#FF6600"
 display_name: Hacker News
 name: hackernews
 description: Steampipe plugin to query stories, items and users from Hacker News.
+og_description: "Query Hacker News with SQL! Open source CLI. No DB required."
+og_image: "/images/plugins/turbot/hackernews-social-graphic.png"
 ---
 
 # Hacker News
