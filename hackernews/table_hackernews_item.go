@@ -49,10 +49,9 @@ func itemList(ctx context.Context, d *plugin.QueryData, _ *plugin.HydrateData) (
 	// default to 5000 max items, but settable in config
 	limit := 5000
 	config := GetConfig(d.Connection)
-	if &config != nil {
-		if config.MaxItems != nil {
-			limit = *config.MaxItems
-		}
+	
+	if config.MaxItems != nil {
+		limit = *config.MaxItems
 	}
 
 	for i := max; i >= max-limit; i-- {
