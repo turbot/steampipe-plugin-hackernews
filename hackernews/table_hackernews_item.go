@@ -8,7 +8,7 @@ import (
 
 	"github.com/PaulRosset/go-hacknews"
 
-	"github.com/turbot/steampipe-plugin-sdk/v2/plugin"
+	"github.com/turbot/steampipe-plugin-sdk/v3/plugin"
 )
 
 func tableHackernewsItem(ctx context.Context) *plugin.Table {
