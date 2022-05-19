@@ -6,7 +6,7 @@ Use SQL to query stories, users and other items from [Hacker News](https://news.
 
 - **[Get started →](https://hub.steampipe.io/plugins/turbot/hackernews)**
 - Documentation: [Table definitions & examples](https://hub.steampipe.io/plugins/turbot/hackernews/tables)
-- Community: [Slack Channel](https://join.slack.com/t/steampipe/shared_invite/zt-oij778tv-lYyRTWOTMQYBVAbtPSWs3g)
+- Community: [Slack Channel](https://steampipe.io/community/join)
 - Get involved: [Issues](https://github.com/turbot/steampipe-plugin-hackernews/issues)
 
 ## Quick start
