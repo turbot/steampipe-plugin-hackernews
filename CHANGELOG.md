@@ -1,3 +1,9 @@
+## v0.3.1 [2022-05-23]
+
+_Bug fixes_
+
+- Fixed the Slack community links in README and docs/index.md files. ([#24](https://github.com/turbot/steampipe-plugin-hackernews/pull/24))
+
 ## v0.3.0 [2022-04-27]
 
 _Enhancements_
