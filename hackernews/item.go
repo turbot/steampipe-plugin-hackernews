@@ -61,7 +61,7 @@ func getItem(ctx context.Context, d *plugin.QueryData, h *plugin.HydrateData) (i
 	init := hacknews.Initializer{Story: "_ignored_", NbPosts: 1}
 	posts, err := init.GetPostStory([]int{int(id)})
 	if err != nil {
-		plugin.Logger(ctx).Error("hackernews_top_story.getTopStory", "query_error", err)
+		plugin.Logger(ctx).Error("hackernews_top.getTopStory", "query_error", err)
 		return nil, err
 	}
 	if len(posts) <= 0 {

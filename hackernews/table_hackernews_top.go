@@ -8,7 +8,7 @@ import (
 
 func tableHackernewsTop(ctx context.Context) *plugin.Table {
 	return &plugin.Table{
-		Name:        "hackernews_top_story",
+		Name:        "hackernews_top",
 		Description: "Top 500 stories.",
 		List: &plugin.ListConfig{
 			Hydrate: hydrateList("topstories"),

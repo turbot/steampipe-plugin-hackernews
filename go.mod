@@ -4,7 +4,7 @@ go 1.18
 
 require (
 	github.com/PaulRosset/go-hacknews v0.0.0-20170815075127-4aad99273a3c
-	github.com/turbot/steampipe-plugin-sdk/v3 v3.3.1
+	github.com/turbot/steampipe-plugin-sdk/v3 v3.3.2
 )
 
 require (
