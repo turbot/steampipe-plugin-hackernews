@@ -3,6 +3,9 @@
 _Bug fixes_
 
 - Fixed inconsistent table name in the `hackernews_top` table which would cause intermittent caching issues. ([#28](https://github.com/turbot/steampipe-plugin-hackernews/pull/28))
+
+_Dependencies_
+
 - Recompiled plugin with [steampipe-plugin-sdk v3.3.2](https://github.com/turbot/steampipe-plugin-sdk/blob/main/CHANGELOG.md#v332--2022-07-11) which includes several caching fixes. ([#28](https://github.com/turbot/steampipe-plugin-hackernews/pull/28))
 
 ## v0.3.1 [2022-05-23]
