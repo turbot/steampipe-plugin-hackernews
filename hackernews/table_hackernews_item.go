@@ -2,13 +2,13 @@ package hackernews
 
 import (
 	"context"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"strconv"
 
 	"github.com/PaulRosset/go-hacknews"
 
-	"github.com/turbot/steampipe-plugin-sdk/v3/plugin"
+	"github.com/turbot/steampipe-plugin-sdk/v4/plugin"
 )
 
 func tableHackernewsItem(ctx context.Context) *plugin.Table {
@@ -33,7 +33,7 @@ func itemList(ctx context.Context, d *plugin.QueryData, _ *plugin.HydrateData) (
 		return nil, err
 	}
 
-	body, err := ioutil.ReadAll(resp.Body)
+	body, err := io.ReadAll(resp.Body)
 	if err != nil {
 		plugin.Logger(ctx).Error("hackernews_item.itemList", "read_body_error", err)
 		return nil, err
