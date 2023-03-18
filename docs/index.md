@@ -76,5 +76,5 @@ connection "hackernews" {
 
 ## Get involved
 
-- Open source: https://github.com/turbot/steampipe-plugin-virustotal
+- Open source: https://github.com/turbot/steampipe-plugin-hackernews
 - Community: [Slack Channel](https://steampipe.io/community/join)
