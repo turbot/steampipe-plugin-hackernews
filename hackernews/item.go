@@ -6,9 +6,9 @@ import (
 
 	"github.com/PaulRosset/go-hacknews"
 
-	"github.com/turbot/steampipe-plugin-sdk/v4/grpc/proto"
-	"github.com/turbot/steampipe-plugin-sdk/v4/plugin"
-	"github.com/turbot/steampipe-plugin-sdk/v4/plugin/transform"
+	"github.com/turbot/steampipe-plugin-sdk/v5/grpc/proto"
+	"github.com/turbot/steampipe-plugin-sdk/v5/plugin"
+	"github.com/turbot/steampipe-plugin-sdk/v5/plugin/transform"
 )
 
 func itemCols() []*plugin.Column {
@@ -55,7 +55,7 @@ func getItem(ctx context.Context, d *plugin.QueryData, h *plugin.HydrateData) (i
 		post := h.Item.(*hacknews.Post)
 		id = post.Id
 	} else {
-		quals := d.KeyColumnQuals
+		quals := d.EqualsQuals
 		id = int(quals["id"].GetInt64Value())
 	}
 	init := hacknews.Initializer{Story: "_ignored_", NbPosts: 1}

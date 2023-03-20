@@ -6,8 +6,8 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/turbot/steampipe-plugin-sdk/v4/grpc/proto"
-	"github.com/turbot/steampipe-plugin-sdk/v4/plugin"
+	"github.com/turbot/steampipe-plugin-sdk/v5/grpc/proto"
+	"github.com/turbot/steampipe-plugin-sdk/v5/plugin"
 )
 
 type User struct {
@@ -45,7 +45,7 @@ func listUser(ctx context.Context, d *plugin.QueryData, h *plugin.HydrateData) (
 		user := h.Item.(*User)
 		id = user.ID
 	} else {
-		quals := d.KeyColumnQuals
+		quals := d.EqualsQuals
 		id = quals["id"].GetStringValue()
 	}
 
