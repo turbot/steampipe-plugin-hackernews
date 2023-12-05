@@ -11,6 +11,9 @@ Hacker News is a social news website focusing on computer science and entreprene
 
 The `hackernews_item` table provides insights into the items posted on Hacker News. As a data analyst or a researcher, explore item-specific details through this table, including the type of post, author, score, and associated metadata. Utilize it to uncover information about the most popular or controversial posts, the frequency of posts by specific authors, or trends in the topics being discussed.
 
+**Important Notes**
+- `max_items` in the connection configuration defines the number of items returned by a list query to this table.
+
 ## Examples
 
 ### List recent items
