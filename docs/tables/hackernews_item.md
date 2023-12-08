@@ -19,21 +19,29 @@ The `hackernews_item` table provides insights into the items posted on Hacker Ne
 ### List recent items
 Explore the latest items in HackerNews to stay updated with the most recent discussions, stories, and comments. This is useful for those who want to keep up with the latest trends and topics in the technology and startup space.
 
-```sql
-select * from hackernews_item
+```sql+postgres
+select * from hackernews_item;
+```
+
+```sql+sqlite
+select * from hackernews_item;
 ```
 
 ### List all recent stories
 Explore the recent narratives shared on Hackernews to stay updated with the latest discussions and trends. This can be useful to monitor popular topics and engage with the community effectively.
 
-```sql
-select * from hackernews_item where type = 'story'
+```sql+postgres
+select * from hackernews_item where type = 'story';
+```
+
+```sql+sqlite
+select * from hackernews_item where type = 'story';
 ```
 
 ### Recent stories with score > 5
 Discover the segments that consist of popular stories on HackerNews. This can be useful to identify trending topics or high-interest areas, helping to guide your content strategy or research focus.
 
-```sql
+```sql+postgres
 select
   *
 from
@@ -42,26 +50,48 @@ where
   type = 'story'
   and score > 5
 order by
-  score desc
+  score desc;
 ```
 
-### Recent stories with no comments
-Explore the recent posts on Hacker News that have not received any comments. This can help identify under-discussed topics and potentially overlooked content.
-
-```sql
+```sql+sqlite
 select
   *
 from
   hackernews_item
 where
   type = 'story'
-  and kids is null
+  and score > 5
+order by
+  score desc;
+```
+
+### Recent stories with no comments
+Explore the recent posts on Hacker News that have not received any comments. This can help identify under-discussed topics and potentially overlooked content.
+
+```sql+postgres
+select
+  *
+from
+  hackernews_item
+where
+  type = 'story'
+  and kids is null;
+```
+
+```sql+sqlite
+select
+  *
+from
+  hackernews_item
+where
+  type = 'story'
+  and kids is null;
 ```
 
 ### Which users have made more than 5 submissions recently
 Explore which users have been particularly active by identifying those who have made more than five submissions recently. This can be useful for understanding user engagement and identifying key contributors or influencers within your community.
 
-```sql
+```sql+postgres
 select
   by,
   count(*)
@@ -72,5 +102,19 @@ group by
 having
   count(*) > 5
 order by
-  count desc
+  count desc;
+```
+
+```sql+sqlite
+select
+  by,
+  count(*)
+from
+  hackernews_item
+group by
+  by
+having
+  count(*) > 5
+order by
+  count(*) desc;
 ```

@@ -16,23 +16,41 @@ The `hackernews_show_hn` table provides insights into 'Show HN' posts on Hacker 
 ### Show HN stories by score
 Explore the popularity of Hacker News 'Show HN' stories by ranking them according to their score. This can help identify trending topics and influential discussions.
 
-```sql
+```sql+postgres
 select
   *
 from
   hackernews_show_hn
 order by
-  score desc
+  score desc;
+```
+
+```sql+sqlite
+select
+  *
+from
+  hackernews_show_hn
+order by
+  score desc;
 ```
 
 ### Show HN stories with most comments
 Explore the most discussed 'Show HN' stories on HackerNews. This query is useful for identifying trending topics or popular discussions within the community.
 
-```sql
+```sql+postgres
 select
   *
 from
   hackernews_show_hn
 order by
-  descendants desc
+  descendants desc;
+```
+
+```sql+sqlite
+select
+  *
+from
+  hackernews_show_hn
+order by
+  descendants desc;
 ```

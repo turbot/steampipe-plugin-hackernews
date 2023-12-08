@@ -16,23 +16,41 @@ The `hackernews_ask_hn` table provides insights into Ask HN posts on Hacker News
 ### Ask HN stories by score
 Explore the most popular Ask HN stories on Hackernews, organized by their popularity score. This allows you to quickly identify and engage with the most impactful discussions.
 
-```sql
+```sql+postgres
 select
   *
 from
   hackernews_ask_hn
 order by
-  score desc
+  score desc;
+```
+
+```sql+sqlite
+select
+  *
+from
+  hackernews_ask_hn
+order by
+  score desc;
 ```
 
 ### Ask HN stories with most comments
 Discover the Ask HN stories that have garnered the most engagement, allowing you to focus on popular topics and trends within the HackerNews community. This could be particularly useful for content creators, marketers, or researchers looking for highly interactive themes.
 
-```sql
+```sql+postgres
 select
   *
 from
   hackernews_ask_hn
 order by
-  descendants desc
+  descendants desc;
+```
+
+```sql+sqlite
+select
+  *
+from
+  hackernews_ask_hn
+order by
+  descendants desc;
 ```

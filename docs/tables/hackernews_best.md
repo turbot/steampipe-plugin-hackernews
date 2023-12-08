@@ -16,23 +16,41 @@ The `hackernews_best` table provides insights into the best stories within Hacke
 ### Best stories by score
 Discover the top-rated stories on Hacker News by sorting them in descending order based on their score. This can be useful for identifying popular trends and high-interest topics within the community.
 
-```sql
+```sql+postgres
 select
   *
 from
   hackernews_best
 order by
-  score desc
+  score desc;
+```
+
+```sql+sqlite
+select
+  *
+from
+  hackernews_best
+order by
+  score desc;
 ```
 
 ### Best stories with most comments
 Discover the most engaging stories on Hackernews by sorting them according to the number of comments they have received. This can be useful for understanding what topics or story types generate the most discussion among users.
 
-```sql
+```sql+postgres
 select
   *
 from
   hackernews_best
 order by
-  descendants desc
+  descendants desc;
+```
+
+```sql+sqlite
+select
+  *
+from
+  hackernews_best
+order by
+  descendants desc;
 ```

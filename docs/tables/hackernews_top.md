@@ -16,23 +16,41 @@ The `hackernews_top` table provides insights into the most popular posts within 
 ### Top stories by score
 Discover the most popular stories on HackerNews by assessing their score. This allows you to identify trending topics and understand what content resonates most with the community.
 
-```sql
+```sql+postgres
 select
   *
 from
   hackernews_top
 order by
-  score desc
+  score desc;
+```
+
+```sql+sqlite
+select
+  *
+from
+  hackernews_top
+order by
+  score desc;
 ```
 
 ### Top stories with most comments
 Discover the most discussed topics on Hackernews. This query helps you identify the stories that are generating the most conversation, enabling you to stay informed about trending topics.
 
-```sql
+```sql+postgres
 select
   *
 from
   hackernews_top
 order by
-  descendants desc
+  descendants desc;
+```
+
+```sql+sqlite
+select
+  *
+from
+  hackernews_top
+order by
+  descendants desc;
 ```

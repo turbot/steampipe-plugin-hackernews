@@ -16,23 +16,41 @@ The `hackernews_job` table provides insights into job postings on Hacker News. A
 ### Job stories by score
 Discover the job postings on Hacker News that have received the highest scores. This can be beneficial for understanding which job listings are most popular or garner the most attention.
 
-```sql
+```sql+postgres
 select
   *
 from
   hackernews_job
 order by
-  score desc
+  score desc;
+```
+
+```sql+sqlite
+select
+  *
+from
+  hackernews_job
+order by
+  score desc;
 ```
 
 ### Job stories with most comments
 Explore which job stories on HackerNews are generating the most discussion, helping you to identify popular topics and trends within the tech job market.
 
-```sql
+```sql+postgres
 select
   *
 from
   hackernews_job
 order by
-  descendants desc
+  descendants desc;
+```
+
+```sql+sqlite
+select
+  *
+from
+  hackernews_job
+order by
+  descendants desc;
 ```

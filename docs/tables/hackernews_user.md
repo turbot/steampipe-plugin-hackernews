@@ -16,6 +16,10 @@ The `hackernews_user` table provides insights into users' activities on Hacker N
 ### Get information about a user
 Explore the details of a specific user in the HackerNews platform. This can be useful in understanding user behavior or for user profile management.
 
-```sql
-select * from hackernews_user where id = 'pg'
+```sql+postgres
+select * from hackernews_user where id = 'pg';
+```
+
+```sql+sqlite
+select * from hackernews_user where id = 'pg';
 ```

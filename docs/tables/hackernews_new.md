@@ -16,23 +16,41 @@ The `hackernews_new` table provides insights into the latest stories posted on H
 ### New stories by score
 Explore the latest stories on Hacker News, sorted by popularity. This query can help you stay updated with trending topics and discussions.
 
-```sql
+```sql+postgres
 select
   *
 from
   hackernews_new
 order by
-  score desc
+  score desc;
+```
+
+```sql+sqlite
+select
+  *
+from
+  hackernews_new
+order by
+  score desc;
 ```
 
 ### New stories with most comments
 Discover the latest stories that have sparked the most discussion, helping you stay updated on trending topics and popular conversations. This is particularly useful for identifying key interests and engaging discussions within your community.
 
-```sql
+```sql+postgres
 select
   *
 from
   hackernews_new
 order by
-  descendants desc
+  descendants desc;
+```
+
+```sql+sqlite
+select
+  *
+from
+  hackernews_new
+order by
+  descendants desc;
 ```
