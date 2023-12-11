@@ -75,7 +75,4 @@ connection "hackernews" {
 }
 ```
 
-## Get involved
 
-- Open source: https://github.com/turbot/steampipe-plugin-hackernews
-- Community: [Join #steampipe on Slack →](https://turbot.com/community/join)
