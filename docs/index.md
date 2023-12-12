@@ -8,13 +8,14 @@ name: hackernews
 description: Steampipe plugin to query stories, items and users from Hacker News.
 og_description: "Query Hacker News with SQL! Open source CLI. No DB required."
 og_image: "/images/plugins/turbot/hackernews-social-graphic.png"
+engines: ["steampipe", "sqlite", "postgres", "export"]
 ---
 
 # Hacker News + Steampipe
 
 [Hacker News](https://news.ycombinator.com) is a social news website focusing on computer science and entrepreneurship. Steampipe marshalls the HN API data into queryable tables letting you interactivly explore it via our command line interface or your favorite SQL client. 
 
-[Steampipe](https://steampipe.io) is an open source CLI to instantly query cloud APIs using SQL.
+[Steampipe](https://steampipe.io) is an open-source zero-ETL engine to instantly query cloud APIs using SQL.
 
 Example query:
 
@@ -74,7 +75,4 @@ connection "hackernews" {
 }
 ```
 
-## Get involved
 
-- Open source: https://github.com/turbot/steampipe-plugin-hackernews
-- Community: [Join #steampipe on Slack →](https://turbot.com/community/join)
