@@ -2,17 +2,10 @@ package hackernews
 
 import (
 	"github.com/turbot/steampipe-plugin-sdk/v5/plugin"
-	"github.com/turbot/steampipe-plugin-sdk/v5/plugin/schema"
 )
 
 type hackernewsConfig struct {
-	MaxItems *int `cty:"max_items"`
-}
-
-var ConfigSchema = map[string]*schema.Attribute{
-	"max_items": {
-		Type: schema.TypeInt,
-	},
+	MaxItems *int `hcl:"max_items"`
 }
 
 func ConfigInstance() interface{} {
