@@ -2,7 +2,6 @@ package hackernews
 
 import (
 	"context"
-	"fmt"
 
 	"github.com/PaulRosset/go-hacknews"
 
@@ -65,9 +64,7 @@ func getItem(ctx context.Context, d *plugin.QueryData, h *plugin.HydrateData) (i
 		return nil, err
 	}
 	if len(posts) <= 0 {
-		fmt.Println("none:", id)
 		return hacknews.Post{Id: id}, nil
 	}
-	fmt.Println(posts[0].Id, posts[0].By)
 	return posts[0], nil
 }
