@@ -1,3 +1,9 @@
+## v0.8.1 [2023-12-14]
+
+_Bug fixes_
+
+- Fixed the plugin to correctly return data without any stray characters when using SQLite.
+
 ## v0.8.0 [2023-12-12]
 
 _What's new?_
