@@ -6,7 +6,7 @@ toolchain go1.23.2
 
 require (
 	github.com/PaulRosset/go-hacknews v0.0.0-20170815075127-4aad99273a3c
-	github.com/turbot/steampipe-plugin-sdk/v5 v5.11.6
+	github.com/turbot/steampipe-plugin-sdk/v5 v5.11.7
 )
 
 require (
