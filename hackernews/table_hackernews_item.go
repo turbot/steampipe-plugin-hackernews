@@ -8,7 +8,7 @@ import (
 
 	"github.com/PaulRosset/go-hacknews"
 
-	"github.com/turbot/steampipe-plugin-sdk/v5/plugin"
+	"github.com/turbot/steampipe-plugin-sdk/v6/plugin"
 )
 
 func tableHackernewsItem(ctx context.Context) *plugin.Table {
@@ -49,7 +49,7 @@ func itemList(ctx context.Context, d *plugin.QueryData, _ *plugin.HydrateData) (
 	// default to 5000 max items, but settable in config
 	limit := 5000
 	config := GetConfig(d.Connection)
-	
+
 	if config.MaxItems != nil {
 		limit = *config.MaxItems
 	}
